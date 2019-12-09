@@ -1,9 +1,12 @@
-title: my test course
-tagline: A brand new course on Learning Lab
-description: my test course to see how creating one works
+title: Upload from Github Actions to GPR
+tagline: Upload to GPR with Github Actions
+description: Upload to GPR with Github Actions
 template:
-  repo: my-test-course-template
-  name: my-test-course
+  repo: actions-to-gpr-tempalte
+  name: actions-to-gpr
+  description: >-
+    A course to learn how to upload to Github Package Registry using Github
+    Actions
 before:
   - type: createIssue
     title: Welcome!
@@ -15,3 +18,8 @@ steps:
     link: '{{ repoUrl }}'
     actions:
       - type: closeIssue
+  - title: ''
+    actions:
+      - type: createIssue
+        title: A new issue
+        body: a-response-file.md
